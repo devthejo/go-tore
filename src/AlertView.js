@@ -1,15 +1,15 @@
-import React, { Component } from 'react'
+import React from 'react'
 
-export default class AlertView extends Component{
-    render() {
-        var text = "";
-        if (this.props.board.in_atari)
-            text = "ATARI!";
-        else if (this.props.board.attempted_suicide)
-            text = "SUICIDE!";
-
-        return (
-            <div id="alerts">{text}</div>
-        );
-    }
+export default function AlertView ({board}){
+  let text = ""
+  if (board.in_atari)
+    text = "ATARI !";
+  else if (board.attempted_suicide)
+    text = "SUICIDE !";
+  else if (board.game_over)
+    text = "GAME OVER !";
+    
+  return (
+    <div id="alerts">{text}</div>
+  )
 }

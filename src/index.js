@@ -4,6 +4,8 @@ import App from './App'
 
 import { AppContextProvider } from './AppContext'
 
+import 'bulma'
+
 ReactDOM.render((
   <AppContextProvider>
     <App />

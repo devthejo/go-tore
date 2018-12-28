@@ -3,11 +3,14 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "bulma": "^0.7.2",
     "classnames": "^2.2.6",
     "node-sass": "^4.11.0",
     "react": "16.7.0-alpha.2",
+    "react-container-dimensions": "^1.4.1",
     "react-dom": "16.7.0-alpha.2",
     "react-scripts": "2.1.2",
+    "serve": "^10.1.1",
     "underscore": "^1.9.1"
   },
   "scripts": {

@@ -48,7 +48,8 @@ Board.prototype.pass = function() {
  * Called when the game ends (both players passed)
  */
 Board.prototype.end_game = function() {
-    console.log("GAME OVER");
+  this.game_over = true
+  console.log("GAME OVER");
 };
 
 /*

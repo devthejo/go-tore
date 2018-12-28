@@ -1,26 +1,37 @@
-import React, { Component } from 'react'
+import React from 'react'
 
 import { GRID_SIZE } from './config'
 import Board from './Board'
 
-export default class BoardIntersection extends Component{
-    handleClick = ()=>{
-      if (this.props.board.play(this.props.row, this.props.col))
-        this.props.onPlay()
-    }
-    render() {
-        var style = {
-            top: this.props.row * GRID_SIZE,
-            left: this.props.col * GRID_SIZE
-        };
+import imgBlack from './square-black.png'
+import imgWhite from './square-white.png'
 
-        var classes = "intersection";
-        if (this.props.color !== Board.EMPTY)
-            classes += this.props.color === Board.BLACK ? " black" : " white";
-
-        return (
-            <div onClick={this.handleClick} 
-                 className={classes} style={style}></div>
-        );
+export default function BoardIntersection (props){
+    
+    function handleClick(){
+      if (props.board.play(props.row, props.col))
+        props.onPlay()
     }
+    
+    const style = {
+      top: props.row * GRID_SIZE,
+      left: props.col * GRID_SIZE
+    }
+    let classes = "intersection"
+    
+    if (props.color !== Board.EMPTY)
+      classes += props.color === Board.BLACK ? " black" : " white"
+    
+    
+    return (
+      <div
+        onClick={handleClick} 
+        className={classes}
+        style={style}
+      >
+        {props.color !== Board.EMPTY && (
+          <img src={props.color === Board.BLACK ? imgBlack : imgWhite} />
+        )}
+      </div>
+    )
 }
