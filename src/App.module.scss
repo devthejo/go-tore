@@ -1,0 +1,80 @@
+.app{
+  height: 100%;
+  position: relative;
+  display: block;
+  margin: 10px;
+  
+  display: flex;
+  justify-content: center;
+}
+
+
+.trayContainer{
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  
+  width: 100vmin;
+  grid-gap: 0;
+  margin: 0 auto;
+}
+
+.tray{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #AAA;
+  
+  border: solid 1px #f00;
+  
+  &.trayNO{
+/*
+    border-top: 0;
+    border-left: 0;
+*/
+  }
+  &.trayN{
+/*
+    border-top: 0;
+*/
+  }
+  &.trayNE{
+/*
+    border-top: 0;
+    border-right: 0;
+*/
+  }
+
+  &.trayO{
+/*
+    border-left: 0;
+*/
+  }
+  &.tray{
+
+  }
+  &.trayE{
+/*
+    border-right: 0;
+*/
+  }
+
+  &.traySO{
+/*
+    border-bottom: 0;
+    border-left: 0;
+*/
+  }
+  &.trayS{
+/*
+    border-bottom: 0;
+*/
+  }
+  &.traySE{
+/*
+    border-bottom: 0;
+    border-right: 0;
+*/
+  }
+  
+}
