@@ -5,8 +5,11 @@ enregistrement partie localStorage
 export enregistrement
 import enregistrement
 décompte prisonniers
-calcul score
 réduire image
 ajouter credits
 optionnaliser le tore
 option pour changer la taille d'affichage du plateau
+après GAME OVER activer boutton désigner les prisonniers
+depuis https://github.com/ismyrnow/Go/
+  ajouter fonction afficher les territoires
+  ajouter fonction calcul score
